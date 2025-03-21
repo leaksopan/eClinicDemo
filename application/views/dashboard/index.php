@@ -1,4 +1,4 @@
-<?php $this->load->view('templates/header'); ?>
+<?php //$this->load->view('templates/header'); ?>
 
 <div class="container-fluid">
     <div class="row">
@@ -494,4 +494,4 @@
     });
 </script>
 
-<?php $this->load->view('templates/footer'); ?> 
+<?php //$this->load->view('templates/footer'); ?> 

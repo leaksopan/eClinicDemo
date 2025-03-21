@@ -135,13 +135,15 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                            <i class="fas fa-user-circle"></i> Admin
+                            <i class="fas fa-user-circle"></i> <?= $user->nama_lengkap ?? 'Guest' ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Profil</a>
+                            <?php if(is_admin()): ?>
                             <a class="dropdown-item" href="<?= base_url('pengguna') ?>"><i class="fas fa-users"></i> Kelola Pengguna</a>
+                            <?php endif; ?>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            <a class="dropdown-item" href="<?= base_url('auth/logout') ?>"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </div>
                     </li>
                 </ul>
